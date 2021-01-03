@@ -1,0 +1,65 @@
+<TaskEdit>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+    FloatLayout:
+        TextInput:
+            id: input
+            text: ''
+            hint_text:'What did you do today...'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.475}
+            size_hint: 0.85, 0.15
+            background_normal: "White.png"
+            background_active: "White.png"
+            multinline:False
+
+        Label:
+            text: "EDIT"
+            font_name: 'Roboto-Thin.ttf'
+            font_size: 37
+            pos_hint: {'center_x': 0.17, 'center_y': 0.68}
+            color: 0,0,0,1
+
+        Button:
+            text: "SAVE"
+            font_name: 'Roboto-Thin.ttf'
+            font_size: 22
+            pos_hint: {'center_x': 0.15, 'center_y': 0.351}
+            color: 0,0,0,1
+            background_color: 0,0,0,0
+            size: 53, 12
+            size_hint: None, None
+            on_release:
+                root.edit(input.text)
+                root.change_screen()
+
+        Button:
+            text: "CANCEL"
+            font_name: 'Roboto-Thin.ttf'
+            font_size: 22
+            pos_hint: {'center_x': 0.78, 'center_y': 0.351}
+            color: 0,0,0,1
+            background_color: 0,0,0,0
+            size: 53, 12
+            size_hint: None, None
+            on_release: root.change_screen()
+        
+        Button:
+            text: "DELETE"
+            font_name: 'Roboto-Thin.ttf'
+            font_size: 22
+            pos_hint: {'center_x': 0.45, 'center_y': 0.351}
+            color: 0,0,0,1
+            background_color: 0,0,0,0
+            size: 53, 12
+            size_hint: None, None
+            on_release: root.show_pop()
+
+
+
+
+
+

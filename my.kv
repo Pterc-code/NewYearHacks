@@ -1,0 +1,17 @@
+#:include title.kv
+#:include main.kv
+#:include task.kv
+#:include edit.kv
+
+FloatLayout:
+    ScreenManager:
+        id: screen_manager
+        TitleWindow:
+            name:"title"
+        MainWindow:
+            name:"main"
+        AddTask:
+            name:"task"
+        TaskEdit:
+            name:"edit"
+

@@ -1,0 +1,58 @@
+<AddTask>:
+
+    input: input
+
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+    FloatLayout:
+        TextInput:
+            id: input
+            hint_text:'What did you do today...'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.475}
+            size_hint: 0.85, 0.15
+            background_normal: "White.png"
+            background_active: "White.png"
+            multinline:False
+
+        Label:
+            text: "ADD SOME \nPRIDE"
+            font_name: 'Roboto-Thin.ttf'
+            font_size: 37
+            pos_hint: {'center_x': 0.31, 'center_y': 0.68}
+            color: 0,0,0,1
+
+        Button:
+            text: "SAVE"
+            font_name: 'Roboto-Thin.ttf'
+            font_size: 22
+            pos_hint: {'center_x': 0.15, 'center_y': 0.351}
+            color: 0,0,0,1
+            background_color: 0,0,0,0
+            size: 53, 12
+            size_hint: None, None
+            on_release:
+                root.add(input.text)
+                root.change_screen()
+
+        Button:
+            text: "CANCEL"
+            font_name: 'Roboto-Thin.ttf'
+            font_size: 22
+            pos_hint: {'center_x': 0.78, 'center_y': 0.351}
+            color: 0,0,0,1
+            background_color: 0,0,0,0
+            size: 53, 12
+            size_hint: None, None
+            on_release: root.change_screen()
+
+
+
+
+
+
+
+
